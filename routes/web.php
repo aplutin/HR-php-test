@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\OrdersController;
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', class_basename(OrdersController::class) . '@list');
+Route::get('/orders/', class_basename(OrdersController::class) . '@list');

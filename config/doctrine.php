@@ -1,5 +1,7 @@
 <?php
 
+use App\Database\EntityMapping\Fluent\OrderMapping;
+
 return [
     /*
     |--------------------------------------------------------------------------
@@ -26,6 +28,7 @@ return [
             'meta' => 'fluent',
             'mappings' => [
                 // Add your mappings here
+                OrderMapping::class
             ],
             'connection' => env('DB_CONNECTION', 'mysql'),
             'namespaces' => [],
