@@ -5,6 +5,9 @@ use App\Providers\AuthServiceProvider;
 use App\Providers\EventServiceProvider;
 use App\Providers\RepositoryServiceProvider;
 use App\Providers\RouteServiceProvider;
+use App\Providers\WeatherServiceProvider;
+use Torann\GeoIP\Facades\GeoIP;
+use Torann\GeoIP\GeoIPServiceProvider;
 
 return [
 
@@ -112,6 +115,13 @@ return [
 
     'key' => env('APP_KEY'),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Api key of yandex weather
+    |--------------------------------------------------------------------------
+    */
+    'yandexWeatherKey' => env('YANDEX_WEATHER_KEY'),
+
     'cipher' => 'AES-256-CBC',
 
     /*
@@ -183,6 +193,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         EventServiceProvider::class,
         RouteServiceProvider::class,
+        GeoIPServiceProvider::class,
+        WeatherServiceProvider::class,
     ],
 
     /*
@@ -231,5 +243,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'GeoIP' => GeoIP::class,
     ],
 ];

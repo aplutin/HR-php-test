@@ -12,7 +12,9 @@
 */
 
 use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\WeatherController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', class_basename(OrdersController::class) . '@list');
 Route::get('/orders/', class_basename(OrdersController::class) . '@list');
+Route::get('/weather/getTemperature/', class_basename(WeatherController::class) . '@getTemperature');
