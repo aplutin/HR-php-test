@@ -37,9 +37,9 @@ class OrderMapping extends EntityMapping
         $builder->integer('status');
         $builder->string('client_email');
         $builder->integer('partner_id')->unsigned();
-        $builder->integer('delivery_dt');
-        $builder->integer('created_at')->nullable();
-        $builder->integer('updated_at')->nullable();
+        $builder->string('delivery_dt');
+        $builder->string('created_at')->nullable();
+        $builder->string('updated_at')->nullable();
 
         //$builder->belongsTo(Partner::class, 'partner_id');
     }

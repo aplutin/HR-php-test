@@ -29,15 +29,15 @@ class Order
      */
     private $partner_id = 0;
     /**
-     * @var int
+     * @var string
      */
     private $delivery_dt = 0;
     /**
-     * @var int
+     * @var string
      */
     private $created_at = 0;
     /**
-     * @var int
+     * @var string
      */
     private $updated_at = 0;
 
@@ -110,52 +110,52 @@ class Order
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getDeliveryDt(): int
+    public function getDeliveryDt(): string
     {
         return $this->delivery_dt;
     }
 
     /**
-     * @param int $delivery_dt
+     * @param string $delivery_dt
      * @return void
      */
-    public function setDeliveryDt(int $delivery_dt): void
+    public function setDeliveryDt(string $delivery_dt): void
     {
         $this->delivery_dt = $delivery_dt;
     }
 
     /**
-     * @return int|null
+     * @return string|null
      */
-    public function getCreatedAt(): ?int
+    public function getCreatedAt(): ?string
     {
         return $this->created_at;
     }
 
     /**
-     * @param int|null $created_at
+     * @param string|null $created_at
      * @return void
      */
-    public function setCreatedAt(?int $created_at = null): void
+    public function setCreatedAt(?string $created_at = null): void
     {
         $this->created_at = $created_at;
     }
 
     /**
-     * @return int|null
+     * @return string|null
      */
-    public function getUpdatedAt(): ?int
+    public function getUpdatedAt(): ?string
     {
         return $this->updated_at;
     }
 
     /**
-     * @param int|null $updated_at
+     * @param string|null $updated_at
      * @return void
      */
-    public function setUpdatedAt(?int $updated_at = null): void
+    public function setUpdatedAt(?string $updated_at = null): void
     {
         $this->updated_at = $updated_at;
     }
